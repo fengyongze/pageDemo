@@ -1,0 +1,14 @@
+.headerLogo {
+  display: inline-block; 
+    span {
+        font-size: $headerFontSize;
+        display: inline-block;
+        margin-top: 4px; 
+        span {
+          display: inline-block;
+          width: 25px;
+          height: 10px;
+          background-color: $mainColor; 
+        }
+    }
+}

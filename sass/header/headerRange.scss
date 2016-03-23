@@ -1,0 +1,32 @@
+.headerRange {
+    display: inline-block;
+    position: relative;
+    bottom: 45px;
+    margin-left: 16px;
+    span {
+        display: inline-block;
+        margin: 0 10px 0 10px; 
+    }
+    input[type=range] {
+        -webkit-appearance: none;
+        width: 100%;
+        display: inline-block;
+        &:focus{
+          outline: none; 
+        }
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 17px;
+          width: 4px;
+          background: $mainColor;
+          cursor: pointer;
+          margin-top: -7px; 
+        }
+        &::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 3px;
+          cursor: pointer;
+          background: $mainColor; 
+        }
+    }
+}

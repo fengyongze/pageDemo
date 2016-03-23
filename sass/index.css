@@ -1,0 +1,387 @@
+@charset "UTF-8";
+/*
+*CONTENTS
+*
+*SETTINGS
+*variable...................................变量集中存储文件
+*
+*TOOLS
+*
+*COMPONENTS
+*
+*BUSINESS
+*
+*BASE
+*headerLeft...................................显示订单和金额的组件
+*headerLogo...................................解释图案的组件
+*headerRange..................................头部滑块的组件
+*headerRight..................................头部的5个按钮的组件
+*tap..........................................头部标签的组件
+*table........................................主体表格组件
+*verificationModal............................验证模态框
+*lockListModal................................长锁清单模态框
+*/
+/* line 2, D:/untitled1/backend/sass/header/headerLeft.scss */
+.headerLeft {
+  margin: 15px 4% 20px 0px;
+  display: inline-block; }
+  /* line 5, D:/untitled1/backend/sass/header/headerLeft.scss */
+  .headerLeft span {
+    font-size: 13px;
+    margin-top: 2px;
+    display: inline-block; }
+    /* line 9, D:/untitled1/backend/sass/header/headerLeft.scss */
+    .headerLeft span span {
+      color: #88cddc; }
+
+/* line 1, D:/untitled1/backend/sass/header/headerLogo.scss */
+.headerLogo {
+  display: inline-block; }
+  /* line 3, D:/untitled1/backend/sass/header/headerLogo.scss */
+  .headerLogo span {
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 4px; }
+    /* line 7, D:/untitled1/backend/sass/header/headerLogo.scss */
+    .headerLogo span span {
+      display: inline-block;
+      width: 25px;
+      height: 10px;
+      background-color: #88cddc; }
+
+/* line 1, D:/untitled1/backend/sass/header/headerRange.scss */
+.headerRange {
+  display: inline-block;
+  position: relative;
+  bottom: 45px;
+  margin-left: 16px; }
+  /* line 6, D:/untitled1/backend/sass/header/headerRange.scss */
+  .headerRange span {
+    display: inline-block;
+    margin: 0 10px 0 10px; }
+  /* line 10, D:/untitled1/backend/sass/header/headerRange.scss */
+  .headerRange input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    display: inline-block; }
+    /* line 14, D:/untitled1/backend/sass/header/headerRange.scss */
+    .headerRange input[type=range]:focus {
+      outline: none; }
+    /* line 17, D:/untitled1/backend/sass/header/headerRange.scss */
+    .headerRange input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 17px;
+      width: 4px;
+      background: #88cddc;
+      cursor: pointer;
+      margin-top: -7px; }
+    /* line 25, D:/untitled1/backend/sass/header/headerRange.scss */
+    .headerRange input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 3px;
+      cursor: pointer;
+      background: #88cddc; }
+
+/* line 1, D:/untitled1/backend/sass/header/headerRight.scss */
+.headerRight {
+  display: inline-block;
+  margin-left: 25px; }
+  /* line 4, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight div {
+    display: inline-block;
+    margin: 0 10px 20px 10px; }
+    /* line 7, D:/untitled1/backend/sass/header/headerRight.scss */
+    .headerRight div span {
+      color: #fff;
+      cursor: pointer;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 13px;
+      display: table-cell;
+      width: 60px;
+      height: 60px;
+      background-color: #88cddc;
+      border-radius: 60px;
+      position: relative; }
+    /* line 20, D:/untitled1/backend/sass/header/headerRight.scss */
+    .headerRight div .headerRightClick {
+      background-color: #fff;
+      color: #88cddc;
+      border: 1.5px solid #88cddc; }
+  /* line 28, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre1, .headerRight .pre2, .headerRight .pre3, .headerRight .pre4 {
+    border-width: 10px;
+    border-style: solid;
+    position: absolute;
+    transform: rotate(-45deg);
+    border-color: transparent; }
+  /* line 35, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre1 {
+    left: 0;
+    top: 31px; }
+  /* line 39, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre1Color {
+    border-right-color: #fff; }
+  /* line 42, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre1Change {
+    border-right-color: #88cddc; }
+  /* line 45, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre2 {
+    left: 3px;
+    top: 28px; }
+  /* line 49, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre2Color {
+    border-right-color: #88cddc; }
+  /* line 52, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre2Change {
+    border-right-color: #fff; }
+  /* line 55, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre3 {
+    border-left-color: #fff;
+    left: 22px;
+    top: 9px; }
+  /* line 60, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre3Color {
+    border-left-color: #fff; }
+  /* line 63, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre3Change {
+    border-left-color: #88cddc; }
+  /* line 66, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre4 {
+    left: 19px;
+    top: 12px; }
+  /* line 70, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre4Color {
+    border-left-color: #88cddc; }
+  /* line 73, D:/untitled1/backend/sass/header/headerRight.scss */
+  .headerRight .pre4Change {
+    border-left-color: #fff; }
+
+/* line 1, D:/untitled1/backend/sass/header/tap.scss */
+.tap {
+  margin-left: 15.5%;
+  width: 75%;
+  position: absolute; }
+  /* line 5, D:/untitled1/backend/sass/header/tap.scss */
+  .tap span {
+    margin: 0 1px 0 1px;
+    cursor: pointer;
+    text-align: center;
+    float: left;
+    line-height: 40px;
+    color: #9b9b9b;
+    font-size: 20px;
+    width: 10.8%;
+    height: 40px;
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #9b9b9b;
+    transition: 1s; }
+  /* line 19, D:/untitled1/backend/sass/header/tap.scss */
+  .tap .tapClick {
+    height: 60px;
+    border-bottom: solid #50879c;
+    line-height: 60px;
+    font-size: 22px;
+    color: #50879c; }
+  /* line 26, D:/untitled1/backend/sass/header/tap.scss */
+  .tap .clear {
+    clear: both; }
+
+/* line 2, D:/untitled1/backend/sass/table/table.scss */
+.tableMain {
+  margin-left: 10px;
+  margin-top: 10px; }
+
+/* line 7, D:/untitled1/backend/sass/table/table.scss */
+.tableBody {
+  position: relative;
+  overflow: auto;
+  margin-top: 30px;
+  height: 395px; }
+
+/* line 15, D:/untitled1/backend/sass/table/table.scss */
+.nbTableBox {
+  overflow: auto;
+  overflow-y: hidden;
+  margin-left: 40px; }
+
+/* line 20, D:/untitled1/backend/sass/table/table.scss */
+.nbTable {
+  display: table;
+  -webkit-transform-origin: top left; }
+  /* line 23, D:/untitled1/backend/sass/table/table.scss */
+  .nbTable div {
+    display: table-row; }
+    /* line 25, D:/untitled1/backend/sass/table/table.scss */
+    .nbTable div span {
+      min-width: 60px;
+      height: 25px;
+      vertical-align: middle;
+      text-align: center;
+      border: 1px solid #fff;
+      display: table-cell;
+      background-color: #f0eff5; }
+
+/* line 37, D:/untitled1/backend/sass/table/table.scss */
+.groundNumberDiv {
+  position: relative;
+  overflow: hidden;
+  padding-left: 40px;
+  height: 20px;
+  top: 30px; }
+
+/* line 44, D:/untitled1/backend/sass/table/table.scss */
+.groundNumber {
+  position: absolute;
+  display: table-row;
+  z-index: 3;
+  -webkit-transform-origin: top left; }
+  /* line 49, D:/untitled1/backend/sass/table/table.scss */
+  .groundNumber span {
+    background-color: #fff;
+    display: table-cell;
+    min-width: 60px;
+    text-align: center;
+    font-size: 16px; }
+
+/* line 58, D:/untitled1/backend/sass/table/table.scss */
+.thead {
+  font-size: 16px;
+  color: #50879c;
+  position: absolute;
+  left: 11%;
+  top: 214px;
+  background-color: #fff;
+  z-index: 4;
+  -webkit-transform-origin: top left; }
+  /* line 69, D:/untitled1/backend/sass/table/table.scss */
+  .thead .ground {
+    margin-left: 40px; }
+  /* line 72, D:/untitled1/backend/sass/table/table.scss */
+  .thead .slash {
+    height: 1px;
+    width: 70px;
+    background-color: #50879c;
+    -webkit-transform: rotate(-25deg); }
+
+/* line 81, D:/untitled1/backend/sass/table/table.scss */
+.vertical {
+  position: absolute;
+  text-align: center;
+  top: -5px;
+  -webkit-transform-origin: top left; }
+  /* line 86, D:/untitled1/backend/sass/table/table.scss */
+  .vertical div {
+    min-width: 60px;
+    height: 25px;
+    display: table-row; }
+
+/* line 1, D:/untitled1/backend/sass/modal/verificationModal.scss */
+#verificationModal .modal-dialog {
+  margin-top: 25%; }
+  /* line 4, D:/untitled1/backend/sass/modal/verificationModal.scss */
+  #verificationModal .modal-dialog .modal-body div {
+    text-align: center; }
+  /* line 7, D:/untitled1/backend/sass/modal/verificationModal.scss */
+  #verificationModal .modal-dialog .modal-body input {
+    margin-top: 27px; }
+  /* line 10, D:/untitled1/backend/sass/modal/verificationModal.scss */
+  #verificationModal .modal-dialog .modal-body .btn {
+    padding: 2px 15px 2px 15px;
+    border-radius: 0;
+    color: #fff;
+    margin: 28px 10px 0 10px; }
+
+/* line 18, D:/untitled1/backend/sass/modal/verificationModal.scss */
+.cancel {
+  background-color: #a0a0a0; }
+
+/* line 21, D:/untitled1/backend/sass/modal/verificationModal.scss */
+.tested {
+  background-color: #87b880; }
+
+/* line 2, D:/untitled1/backend/sass/modal/lockListModal.scss */
+#lockListModal .modal-header {
+  border: 0;
+  text-align: center;
+  font-size: 20px; }
+
+/* line 8, D:/untitled1/backend/sass/modal/lockListModal.scss */
+#lockListModal .modal-body {
+  height: 60%;
+  overflow: auto; }
+  /* line 11, D:/untitled1/backend/sass/modal/lockListModal.scss */
+  #lockListModal .modal-body .groundListBox {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center; }
+  /* line 16, D:/untitled1/backend/sass/modal/lockListModal.scss */
+  #lockListModal .modal-body .date {
+    font-size: 30px; }
+  /* line 19, D:/untitled1/backend/sass/modal/lockListModal.scss */
+  #lockListModal .modal-body .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7.5px 8px 7.5px 0;
+    border-color: transparent #808080 transparent transparent;
+    position: relative;
+    left: 10px; }
+  /* line 28, D:/untitled1/backend/sass/modal/lockListModal.scss */
+  #lockListModal .modal-body .groundList {
+    border-left: 1px solid #808080;
+    width: 230px;
+    padding-left: 20px;
+    margin-left: 10px; }
+    /* line 33, D:/untitled1/backend/sass/modal/lockListModal.scss */
+    #lockListModal .modal-body .groundList span {
+      font-size: 18px;
+      padding: 5px 2px 5px 2px;
+      display: inline-block; }
+  /* line 39, D:/untitled1/backend/sass/modal/lockListModal.scss */
+  #lockListModal .modal-body .userList {
+    width: 210px; }
+    /* line 41, D:/untitled1/backend/sass/modal/lockListModal.scss */
+    #lockListModal .modal-body .userList span {
+      display: block;
+      font-size: 16px;
+      margin: 12px 2px 13px 14px; }
+      /* line 45, D:/untitled1/backend/sass/modal/lockListModal.scss */
+      #lockListModal .modal-body .userList span input {
+        height: 22px;
+        width: 140px;
+        color: #50879c; }
+
+/* line 53, D:/untitled1/backend/sass/modal/lockListModal.scss */
+#lockListModal .modal-footer {
+  border: 0;
+  text-align: center; }
+  /* line 56, D:/untitled1/backend/sass/modal/lockListModal.scss */
+  #lockListModal .modal-footer div {
+    color: #50879c;
+    margin-bottom: 23px; }
+  /* line 60, D:/untitled1/backend/sass/modal/lockListModal.scss */
+  #lockListModal .modal-footer .btn {
+    color: #fff;
+    width: 80px;
+    height: 30px;
+    border-radius: 0;
+    margin: 0 30px 0 30px; }
+
+/* line 25, D:/untitled1/backend/sass/index.scss */
+html, body {
+  height: 100%; }
+
+/* line 28, D:/untitled1/backend/sass/index.scss */
+.header {
+  background-color: #f2f2f2;
+  padding-left: 15.5%; }
+
+/* line 33, D:/untitled1/backend/sass/index.scss */
+.bigBox {
+  height: 68%;
+  margin-top: 70px;
+  margin-left: 13%;
+  overflow-y: hidden; }
+
+/*# sourceMappingURL=index.css.map */

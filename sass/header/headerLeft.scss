@@ -1,0 +1,13 @@
+
+.headerLeft {
+  margin: 15px 4% 20px 0px;
+  display: inline-block;
+    span {
+        font-size: $headerFontSize;
+        margin-top: 2px;
+        display: inline-block; 
+        span {
+          color: $mainColor;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.headerRight {
+    display: inline-block;
+    margin-left: 25px;
+    div {
+        display: inline-block;
+        margin: 0 10px 20px 10px;
+        span {
+            color: $whiteColor;
+            cursor: pointer;
+            text-align: center;
+            vertical-align: middle;
+            font-size: $headerFontSize;
+            display: table-cell;
+            width: $headerDiv;
+            height: $headerDiv;
+            background-color: $mainColor;
+            border-radius: $headerDiv;
+            position: relative; 
+        }
+        .headerRightClick {
+            background-color: $whiteColor;
+            color: $mainColor;
+            border: 1.5px solid $mainColor; 
+        }
+
+    }
+//全屏按钮的箭头
+    .pre1,.pre2,.pre3,.pre4{
+        border-width: 10px;
+        border-style: solid;
+        position: absolute;
+        transform: rotate(-45deg); 
+        border-color: transparent;
+    }
+    .pre1 {
+        left: 0;
+        top: 31px;
+    }
+    .pre1Color{
+        border-right-color: $whiteColor;
+    }
+    .pre1Change{
+        border-right-color: $mainColor;
+    }
+    .pre2 {
+        left: 3px;
+        top: 28px;
+    }
+    .pre2Color{
+        border-right-color:$mainColor;
+    }
+    .pre2Change{
+        border-right-color: $whiteColor;
+    }
+    .pre3 {
+        border-left-color: $whiteColor;
+        left: 22px;
+        top: 9px;
+    }
+    .pre3Color{
+        border-left-color: $whiteColor;
+    }
+    .pre3Change{
+        border-left-color:$mainColor; 
+    }
+    .pre4 {
+        left: 19px;
+        top: 12px;
+    }
+    .pre4Color{
+        border-left-color: $mainColor;
+    }
+    .pre4Change{
+        border-left-color: $whiteColor;
+    }
+}

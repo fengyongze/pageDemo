@@ -1,0 +1,25 @@
+/* line 1, D:/untitled1/backend/sass/modal/verificationModal.scss */
+#verificationModal .modal-dialog {
+  margin-top: 25%; }
+  /* line 4, D:/untitled1/backend/sass/modal/verificationModal.scss */
+  #verificationModal .modal-dialog .modal-body div {
+    text-align: center; }
+  /* line 7, D:/untitled1/backend/sass/modal/verificationModal.scss */
+  #verificationModal .modal-dialog .modal-body input {
+    margin-top: 27px; }
+  /* line 10, D:/untitled1/backend/sass/modal/verificationModal.scss */
+  #verificationModal .modal-dialog .modal-body .btn {
+    padding: 2px 15px 2px 15px;
+    border-radius: 0;
+    color: $whiteColor;
+    margin: 28px 10px 0 10px; }
+
+/* line 18, D:/untitled1/backend/sass/modal/verificationModal.scss */
+.cancel {
+  background-color: #a0a0a0; }
+
+/* line 21, D:/untitled1/backend/sass/modal/verificationModal.scss */
+.tested {
+  background-color: #87b880; }
+
+/*# sourceMappingURL=verificationModal.css.map */
