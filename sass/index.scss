@@ -20,19 +20,48 @@
 *verificationModal............................验证模态框
 *lockListModal................................长锁清单模态框
 */
-@import "_variable","header/headerLeft","header/headerLogo","header/headerRange","header/headerRight","header/tap","table/table","modal/verificationModal","modal/lockListModal";
+@import "_variable";
+
+@import "header/headerLeft";
+
+@import "header/headerLogo";
+
+@import "header/headerRange";
+
+@import "header/headerRight";
+
+@import "tap/tap";
+
+@import "table/table";
+
+@import "modal/verificationModal";
+
+@import "modal/lockListModal";
+
+@import "modal/headerLockAndUnlockModal";
+
+@import "modal/modal";
+
+@import "img/icon";
+
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
 //头部的DIV
-html,body{
+html, body {
     height: 100%;
 }
+
 .header {
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2;
     padding-left: $headerMargin-left;
 }
+
 //主体的DIV
 .bigBox {
     height: 68%;
-    margin-top:70px;
+    margin-top: 40px;
     margin-left: 13%;
     overflow-y: hidden;
 }

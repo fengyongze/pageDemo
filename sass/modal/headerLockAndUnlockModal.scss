@@ -1,0 +1,73 @@
+.headerLockAndUnlockModal {
+    .modal-body {
+        text-align: center;
+
+        .groundListBox {
+            display: inline-flex;
+            margin-top: 20px;
+            align-items: center;
+
+            .groundList {
+                margin-top: 5px;
+
+                span {
+                    font-size: 18px;
+                    display: inline-block;
+                    padding: 5px 2px 5px 2px;
+                }
+            }
+
+            .userList {
+                span {
+                    font-size: 16px;
+                    display: block;
+                    margin: 12px 2px 13px 14px;
+
+                    input {
+                        width: 140px;
+                        height: 22px;
+                        color: $secondayColor;
+                    }
+                }
+            }
+        }
+
+        .btn {
+            width: 80px;
+            height: 30px;
+            margin: 20px 10px 0 10px;
+            color: $whiteColor;
+            border-radius: 0;
+        }
+    }
+}
+
+#headerLockModal {
+    .checkbox {
+        font-size: 18px;
+        color: $secondayColor;
+
+        input {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            margin-left: -30px;
+            border: 1px solid $secondayColor;
+            background-color: $whiteColor;
+            -webkit-appearance: none;
+        }
+
+        input:checked {
+            -webkit-appearance: checkbox;
+        }
+    }
+}
+
+#headerUnlockModal {
+    .unlockModalText {
+        font-size: 18px;
+        margin-top: 30px;
+        color: $secondayColor;
+    }
+}

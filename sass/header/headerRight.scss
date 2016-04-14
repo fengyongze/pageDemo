@@ -1,76 +1,98 @@
 .headerRight {
     display: inline-block;
     margin-left: 25px;
+
     div {
         display: inline-block;
         margin: 0 10px 20px 10px;
+
         span {
-            color: $whiteColor;
-            cursor: pointer;
-            text-align: center;
-            vertical-align: middle;
             font-size: $headerFontSize;
+            position: relative;
             display: table-cell;
             width: $headerDiv;
             height: $headerDiv;
-            background-color: $mainColor;
+            cursor: pointer;
+            text-align: center;
+            vertical-align: middle;
+            color: $whiteColor;
             border-radius: $headerDiv;
-            position: relative; 
-        }
-        .headerRightClick {
-            background-color: $whiteColor;
-            color: $mainColor;
-            border: 1.5px solid $mainColor; 
+            background-color: $mainColor;
         }
 
+        .headerRightClick {
+            color: $mainColor;
+            border: 1.5px solid $mainColor;
+            background-color: $whiteColor;
+        }
     }
-//全屏按钮的箭头
-    .pre1,.pre2,.pre3,.pre4{
+
+    .hidden {
+        display: none;
+    }
+
+    //全屏按钮的箭头
+    .pre1,
+    .pre2,
+    .pre3,
+    .pre4 {
+        position: absolute;
+        transform: rotate(-45deg);
         border-width: 10px;
         border-style: solid;
-        position: absolute;
-        transform: rotate(-45deg); 
         border-color: transparent;
     }
+
     .pre1 {
-        left: 0;
         top: 31px;
+        left: 0;
     }
-    .pre1Color{
+
+    .pre1Color {
         border-right-color: $whiteColor;
     }
-    .pre1Change{
+
+    .pre1Change {
         border-right-color: $mainColor;
     }
+
     .pre2 {
-        left: 3px;
         top: 28px;
+        left: 3px;
     }
-    .pre2Color{
-        border-right-color:$mainColor;
+
+    .pre2Color {
+        border-right-color: $mainColor;
     }
-    .pre2Change{
+
+    .pre2Change {
         border-right-color: $whiteColor;
     }
+
     .pre3 {
-        border-left-color: $whiteColor;
-        left: 22px;
         top: 9px;
-    }
-    .pre3Color{
+        left: 22px;
         border-left-color: $whiteColor;
     }
-    .pre3Change{
-        border-left-color:$mainColor; 
+
+    .pre3Color {
+        border-left-color: $whiteColor;
     }
-    .pre4 {
-        left: 19px;
-        top: 12px;
-    }
-    .pre4Color{
+
+    .pre3Change {
         border-left-color: $mainColor;
     }
-    .pre4Change{
+
+    .pre4 {
+        top: 12px;
+        left: 19px;
+    }
+
+    .pre4Color {
+        border-left-color: $mainColor;
+    }
+
+    .pre4Change {
         border-left-color: $whiteColor;
     }
 }

@@ -1,0 +1,71 @@
+.appIcon {
+    background-image: url(../img/icon-3.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.lockedIcon {
+    background-image: url(../img/icon-2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.canLockIcon {
+    background-image: url(../img/icon-5.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.canUnlockIcon {
+    background-image: url(../img/icon-4.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.unPaidIcon {
+    background-image: url(../img/icon-1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.appImg {
+    background-image: url(../img/icon-3.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.appImg:after {
+    content: 'APP订场';
+}
+
+.lockedImg {
+    background-image: url(../img/icon-2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.lockedImg:after {
+    content: '锁定';
+}
+
+.canLockImg {
+    background-image: url(../img/icon-5.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.canUnlockImg {
+    background-image: url(../img/icon-4.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.unPaidImg {
+    background-image: url(../img/icon-1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.unPaidImg:after {
+    content: '待支付';
+}

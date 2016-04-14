@@ -11,49 +11,62 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.css">
     <script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
+    <script src="js/template.js"></script>
 </head>
 
 <body>
-    <div class="header">
+    <header class="header">
         <div class="headerLeft">
-            <span>APP订单:<span>9笔</span></span>
-            <br/>
-            <span>锁定订单:<span>13笔</span></span>
-            <br/>
-            <span>APP金额:<span>280元</span></span>
-            <br/>
-            <span>锁定金额:<span>380元</span></span>
-            <br/>
-            <span>当日总金额:<span>660元</span></span>
+            <div class="left">
+                <div>APP订单:</div>
+                <div>锁定订单:</div>
+                <div>APP金额:</div>
+                <div>锁定金额:</div>
+                <div>当日总金额:</div>
+            </div>
+            <div class="right">
+                <div>9笔</div>
+                <div>13笔</div>
+                <div>280元</div>
+                <div>380元</div>
+                <div>660元</div>
+            </div>
         </div>
         <div class="headerLogo">
-            <span>APP订:<span></span></span>
-            <br/>
-            <span>已锁定:<span></span></span>
-            <br/>
-            <span>可锁定:<span></span></span>
-            <br/>
-            <span>可解锁:<span></span></span>
-            <br/>
-            <span>待支付:<span></span></span>
+            <div class="left">
+                <div>APP订:</div>
+                <div>已锁定:</div>
+                <div>可锁定:</div>
+                <div>可解锁:</div>
+                <div>待支付:</div>
+            </div>
+            <div class="right">
+                <div class="appIcon"></div>
+                <div class="lockedIcon"></div>
+                <div class="canLockIcon"></div>
+                <div class="canUnlockIcon"></div>
+                <div class="unPaidIcon"></div>
+            </div>
         </div>
         <div class="headerRange">
-            <span>50%</span>
+            <span class="rangeText">50%</span>
             <span><input type="range" id="range"></span>
-            <span>100%</span>
+            <span class="rangeText">100%</span>
         </div>
         <div class="headerRight">
-            <div id="verification" data-toggle="modal"><span>验证</span></div>
-            <div id="unlock"><span>解除<br>锁定</span></div>
-            <div id="lockList" data-toggle="modal"><span>长锁<br>清单</span></div>
-            <div><span>60s</span></div>
+            <div id="verification" class="verificationCanClick"><span>验证</span></div>
+            <div id="headerUnlockAndLock"><span class="headerRightClick">解锁<br>锁定</span></div>
+            <div id="headerLock" class="hidden"><span>锁定</span></div>
+            <div id="headerUnlock" class="hidden"><span>解锁</span></div>
+            <div id="lockList" class="lockListCanClick"><span>长锁<br>清单</span></div>
+            <div><span id="time">60s</span></div>
             <div class="screen full"><span>
                 <div class="pre1 pre1Color"></div><div class="pre2 pre2Color"></div>
                 <div class="pre3 pre3Color"></div><div class="pre4 pre4Color"></div>
             </span>
             </div>
         </div>
-    </div>
+    </header>
     <div class="tap">
         <span>03-01</span>
         <span>03-02</span>
@@ -69,28 +82,28 @@
     <div class="bigBox">
         <div class="tableMain">
             <div class="thead">
-                <b class="time">时间</b>
-                <div class="slash"></div>
                 <b class="ground">场号</b>
+                <div class="slash"></div>
+                <b class="time">时间</b>
             </div>
             <div class="groundNumberDiv">
                 <div class="groundNumber">
-                    <span>1号场</span>
-                    <span>1号场</span>
-                    <span>1号场</span>
-                    <span>1号场</span>
-                    <span>1号场</span>
-                    <span>1号场</span>
-                    <span>1号场</span>
-                    <span>1号场</span>
-                    <span>1号场</span>
-                    <span>1号场</span>
+                    <span>01号场</span>
+                    <span>02号场</span>
+                    <span>03号场</span>
+                    <span>04号场</span>
+                    <span>05号场</span>
+                    <span>06号场</span>
+                    <span>07号场</span>
+                    <span>08号场</span>
+                    <span>09号场</span>
+                    <span>10号场</span>
                 </div>
             </div>
             <div class="tableBody">
                 <div class="vertical">
-                    <div>8:00</div>
-                    <div>9:00</div>
+                    <div>08:00</div>
+                    <div>09:00</div>
                     <div>10:00</div>
                     <div>11:00</div>
                     <div>12:00</div>
@@ -110,69 +123,70 @@
                 <div class="nbTableBox">
                     <div class="nbTable">
                         <div>
-                            <span>112</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
+                            <span class="appImg" data-row="1" data-col="1"></span>
+                            <span class="appImg" data-row="1" data-col="2"></span>
+                            <span class="unseclect" data-row="1" data-col="3" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="1" data-col="4" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="1" data-col="5" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="1" data-col="6" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="1" data-col="7" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="1" data-col="8" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="1" data-col="9" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="1" data-col="10" data-state="unseclect"></span>
                         </div>
                         <div>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
+                            <span class="unseclect" data-row="2" data-col="1" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="2" data-col="2" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="2" data-col="3" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="2" data-col="4" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="2" data-col="5" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="2" data-col="6" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="2" data-col="7" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="2" data-col="8" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="2" data-col="9" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="2" data-col="10" data-state="unseclect"></span>
                         </div>
                         <div>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
+                            <span class="unseclect" data-row="3" data-col="1" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="3" data-col="2" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="3" data-col="3" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="3" data-col="4" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="3" data-col="5" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="3" data-col="6" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="3" data-col="7" data-state="unseclect"></span>
+                            <span class="unseclect" data-row="3" data-col="8" data-state="unseclect"></span>
+                            <span class="unPaidImg" data-row="3" data-col="9"></span>
+                            <span class="unPaidImg" data-row="3" data-col="10"></span>
                         </div>
                         <div>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
-                            <span>1123</span>
+                            <span class="lockedImg" data-row="4" data-col="1" data-state="locked"></span>
+                            <span class="lockedImg" data-row="4" data-col="2" data-state="locked"></span>
+                            <span class="lockedImg" data-row="4" data-col="3" data-state="locked"></span>
+                            <span class="lockedImg" data-row="4" data-col="4" data-state="locked"></span>
+                            <span class="lockedImg" data-row="4" data-col="5" data-state="locked"></span>
+                            <span class="lockedImg" data-row="4" data-col="6" data-state="locked"></span>
+                            <span class="lockedImg" data-row="4" data-col="7" data-state="locked"></span>
+                            <span class="lockedImg" data-row="4" data-col="8" data-state="locked"></span>
+                            <span class="lockedImg" data-row="4" data-col="9" data-state="locked"></span>
+                            <span class="lockedImg" data-row="4" data-col="10" data-state="locked"></span>
                         </div>
-                        <div><span>123</span></div>
-                        <div><span>123</span></div>
-                        <div><span>123</span></div>
-                        <div><span>123</span></div>
-                        <div><span>123</span></div>
-                        <div><span>123</span></div>
-                        <div><span>123</span></div>
-                        <div><span>123</span></div>
-                        <div><span>123</span></div>
-                        <div><span>123</span></div>
-                        <div><span>123</span></div>
+                        <div><span class="unseclect" data-row="5" data-col="1" data-state="unseclect"></span></div>
+                        <div><span class="unseclect" data-row="6" data-col="1" data-state="unseclect"></span></div>
+                        <div><span class="unseclect" data-row="7" data-col="1" data-state="unseclect"></span></div>
+                        <div><span class="unseclect" data-row="8" data-col="1" data-state="unseclect"></span></div>
+                        <div><span class="unseclect" data-row="9" data-col="1" data-state="unseclect"></span></div>
+                        <div><span class="unseclect" data-row="10" data-col="1" data-state="unseclect"></span></div>
+                        <div><span class="unseclect" data-row="11" data-col="1" data-state="unseclect"></span></div>
+                        <div><span class="unseclect" data-row="12" data-col="1" data-state="unseclect"></span></div>
+                        <div><span class="unseclect" data-row="13" data-col="1" data-state="unseclect"></span></div>
+                        <div><span class="unseclect" data-row="14" data-col="1" data-state="unseclect"></span></div>
+                        <div><span class="unseclect" data-row="15" data-col="1" data-state="unseclect"></span></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--    调出验证模态框-->
     <div class="modal fade" id="verificationModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -189,6 +203,74 @@
             </div>
         </div>
     </div>
+    <!--    调出锁定模态框-->
+    <div class="modal fade headerLockAndUnlockModal" id="headerLockModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="title"><b>锁定球场</b></div>
+                    <div class="groundListBox">
+                        <div class="groundList">
+                        </div>
+                        <div class="userList">
+                            <span>姓名:<input type="text" value="梁生"></span>
+                            <span>电话:<input type="text" value="13695191688"></span>
+                            <span>备注:<input type="text" value="balaba"></span>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">长期锁定选中球场
+                        </label>
+                    </div>
+                    <div>
+                        <button class="btn cancel" data-dismiss="modal" aria-label="Close">取消</button>
+                        <button class="btn tested">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    调出解锁模态框-->
+    <div class="modal fade headerLockAndUnlockModal" id="headerUnlockModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="title"><b>锁定球场</b></div>
+                    <div class="groundListBox">
+                        <div class="groundList">
+                            <div>
+                                <span>周一</span>
+                                <span>15:00~16:00</span>
+                                <span>vip1场</span>
+                            </div>
+                            <div>
+                                <span>周一</span>
+                                <span>15:00~16:00</span>
+                                <span>vip1场</span>
+                            </div>
+                            <div>
+                                <span>周一</span>
+                                <span>15:00~16:00</span>
+                                <span>vip1场</span>
+                            </div>
+                        </div>
+                        <div class="userList">
+                            <span>姓名:<input type="text" value="梁生"></span>
+                            <span>电话:<input type="text" value="13695191688"></span>
+                            <span>备注:<input type="text" value="balaba"></span>
+                        </div>
+                    </div>
+                    <div class="unlockModalText">解锁当前球场，并不影响长期锁定球场</div>
+                    <div>
+                        <button class="btn cancel" data-dismiss="modal" aria-label="Close">取消</button>
+                        <button class="btn tested">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    调出长锁清单模态框-->
     <div class="modal fade" id="lockListModal" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -223,6 +305,9 @@
                             <span>电话:<input type="text" value="13695191688"></span>
                             <span>备注:<input type="text" value="balaba"></span>
                         </div>
+                        <div>
+                            <span class="closeIcon"></span>
+                        </div>
                     </div>
                     <div class="groundListBox">
                         <div class="date">
@@ -246,6 +331,9 @@
                             <span>电话:<input type="text" value="13695191688"></span>
                             <span>备注:<input type="text" value="balaba"></span>
                         </div>
+                        <div>
+                            <span class="closeIcon"></span>
+                        </div>
                     </div>
                     <div class="groundListBox">
                         <div class="date">
@@ -278,6 +366,9 @@
                             <span>姓名:<input type="text" value="梁生"></span>
                             <span>电话:<input type="text" value="13695191688"></span>
                             <span>备注:<input type="text" value="balaba"></span>
+                        </div>
+                        <div>
+                            <span class="closeIcon"></span>
                         </div>
                     </div>
                 </div>
@@ -292,6 +383,15 @@
         </div>
     </div>
 </body>
+<script id="lockAndUnlockTemplate" type="text/html">
+    {{each msg}}
+        <div>
+            <span>周一</span>
+            <span>{{$value.time}}</span>
+            <span>{{$value.ground}}</span>
+        </div>
+    {{/each}}
+</script>
 <script data-main="js/index" src="js/require.js"></script>
 
 </html>

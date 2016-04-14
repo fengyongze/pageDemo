@@ -1,91 +1,117 @@
 //动态改变CSS的长度和宽度写在JS
-.tableMain{
-    margin-left: 10px;
+.tableMain {
+    height: 100%;
     margin-top: 10px;
+    margin-left: 10px;
 }
+
 //出现纵向滚动条，可以控制vertical的纵向滚动
 .tableBody {
     position: relative;
     overflow: auto;
-    margin-top: 30px;
-    height: 395px;
+    height: 91%;
+    padding-top: 27px;
 }
+
 //出现横向滚动条，取消纵向滚动条
 //表格的主体
-.nbTableBox{
+.nbTableBox {
     overflow: auto;
     overflow-y: hidden;
     margin-left: 40px;
 }
+
 .nbTable {
-    display:table;
+    display: table;
     -webkit-transform-origin: $tableTransform-origin;
-     div {
-    display: table-row; 
-         span {
-          min-width: $tableWidth;
-          height: $tableHeight;
-          vertical-align: middle;
-          text-align: center;
-          border: 1px solid $whiteColor;
-          display: table-cell;
-          background-color: #f0eff5; 
-         }
+
+    div {
+        display: table-row;
+
+        span {
+            font-size: 12px;
+            display: table-cell;
+            min-width: $tableWidth;
+            height: $tableHeight;
+            cursor: pointer;
+            text-align: center;
+            vertical-align: middle;
+            color: $whiteColor;
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            border-color: $whiteColor;
+            background-color: #f0eff5;
+        }
     }
 }
+
 //几号场的横轴
-.groundNumberDiv{
+.groundNumberDiv {
     position: relative;
+    top: 20px;
     overflow: hidden;
-    padding-left: 40px;
     height: 20px;
-    top:30px;
+    padding-left: 40px;
 }
-.groundNumber{
+
+.groundNumber {
     position: absolute;
-    display: table-row;
     z-index: 3;
-     -webkit-transform-origin: $tableTransform-origin;
+    display: table-row;
+    -webkit-transform-origin: $tableTransform-origin;
+
     span {
-        background-color: $whiteColor;
+        font-size: 14px;
         display: table-cell;
         min-width: $tableWidth;
         text-align: center;
-        font-size: 16px;
+        background-color: $whiteColor;
+    }
+
+    .click {
+        color: #87b880;
     }
 }
+
 //时间/场号
 .thead {
     font-size: 16px;
-    color: $secondayColor;
     position: absolute;
-    left: 11%;
-    top: 214px;
-    background-color: $whiteColor;
     z-index: 4;
-    -webkit-transform-origin: $tableTransform-origin;
-    .time {
-    }
+    top: 190px;
+    left: 11%;
+    -webkit-transform-origin: top;
+    color: $secondayColor;
+    background-color: transparent;
+
     .ground {
+        position: relative;
+        top: 5px;
         margin-left: $tableMargin-left;
     }
+
     .slash {
-    height: 1px;
-    width: 70px;
-    background-color: $secondayColor;
-    -webkit-transform: $tableRotate;
+        width: 70px;
+        height: 1px;
+        -webkit-transform: $tableRotate;
+        background-color: $secondayColor;
     }
- 
 }
+
 //8:00的时间轴
 .vertical {
     position: absolute;
-    text-align: center;
-    top:-5px;
+    top: 18px;
     -webkit-transform-origin: $tableTransform-origin;
-      div {
-          min-width: $tableWidth;
-          height: $tableHeight;
-          display: table-row;
-      }
+    text-align: center;
+
+    div {
+        display: table-row;
+        min-width: $tableWidth;
+        height: $tableHeight;
+    }
+
+    .click {
+        color: #87b880;
+    }
 }

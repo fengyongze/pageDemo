@@ -1,32 +1,43 @@
 .headerRange {
-    display: inline-block;
     position: relative;
     bottom: 45px;
+    display: inline-block;
     margin-left: 16px;
+
     span {
         display: inline-block;
-        margin: 0 10px 0 10px; 
     }
+
+    .rangeText {
+        font-size: $headerFontSize;
+        position: relative;
+        top: 6px;
+        margin: 0 5px;
+    }
+
     input[type=range] {
-        -webkit-appearance: none;
-        width: 100%;
         display: inline-block;
-        &:focus{
-          outline: none; 
+        width: 100%;
+        -webkit-appearance: none;
+
+        &:focus {
+            outline: none;
         }
+
         &::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          height: 17px;
-          width: 4px;
-          background: $mainColor;
-          cursor: pointer;
-          margin-top: -7px; 
+            width: 4px;
+            height: 17px;
+            margin-top: -7px;
+            cursor: pointer;
+            background: $mainColor;
+            -webkit-appearance: none;
         }
+
         &::-webkit-slider-runnable-track {
-          width: 100%;
-          height: 3px;
-          cursor: pointer;
-          background: $mainColor; 
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+            background: $mainColor;
         }
     }
 }
